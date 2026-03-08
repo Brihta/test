@@ -728,20 +728,31 @@ class FlashcardApp {
 
     // ── Visual mode indicator ──────────────────────────────────────────────
     this.cardElement.classList.remove('mode-question', 'mode-answer');
-    let modeIcon = this.cardElement.querySelector('.card-mode-icon');
-    if (!modeIcon) {
-      modeIcon = document.createElement('span');
-      modeIcon.className = 'card-mode-icon';
-      this.cardFront.appendChild(modeIcon);
+
+    // Ensure one icon on each face
+    let iconFront = this.cardFront.querySelector('.card-mode-icon');
+    if (!iconFront) {
+      iconFront = document.createElement('span');
+      iconFront.className = 'card-mode-icon';
+      this.cardFront.appendChild(iconFront);
     }
+    let iconBack = this.cardBack.querySelector('.card-mode-icon');
+    if (!iconBack) {
+      iconBack = document.createElement('span');
+      iconBack.className = 'card-mode-icon';
+      this.cardBack.appendChild(iconBack);
+    }
+
     if (card.isSloToEng) {
+      // Front = question, Back = answer
       this.cardElement.classList.add('mode-question');
-      modeIcon.textContent = '🔍';
-      modeIcon.title = 'Vprašanje';
+      iconFront.textContent = '🔍';  iconFront.title = 'Vprašanje';
+      iconBack.textContent  = '💡';  iconBack.title  = 'Odgovor';
     } else {
+      // Front = answer, Back = question
       this.cardElement.classList.add('mode-answer');
-      modeIcon.textContent = '💡';
-      modeIcon.title = 'Odgovor';
+      iconFront.textContent = '💡';  iconFront.title = 'Odgovor';
+      iconBack.textContent  = '🔍';  iconBack.title  = 'Vprašanje';
     }
     // ──────────────────────────────────────────────────────────────────────
 
