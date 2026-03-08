@@ -1,0 +1,162 @@
+[
+  {
+    "question": "Kakšne lastnosti ima voda in za kaj vse jo uporabljamo?",
+    "answer": "Voda je tekočina brez vonja, barve in okusa. Potrebujemo jo vsi – rastline, živali, glive in ljudje. Vodo uporabljamo za kuhanje, umivanje in čiščenje."
+  },
+  {
+    "question": "V kakšnem stanju je lahko voda?",
+    "answer": "Lahko je v trdnem, tekočem ali plinastem stanju."
+  },
+  {
+    "question": "Kdaj voda izpareva in kdaj izhlapeva? Navedi primere.",
+    "answer": "Izpareva: Ko voda prehaja iz tekočine v paro pri temperaturi vrelišča (npr. voda v posodi ob vretju). Izhlapeva: Ko voda prehaja iz tekočine v paro, ne da bi dosegla vrelišče (npr. izhlapevanje vode iz morja ali luž)."
+  },
+  {
+    "question": "Kako voda kroži v naravi?",
+    "answer": "Iz površinskih voda voda izhlapeva in se nabira v ozračju, kjer kondenzira. Voda, ki se zbere v oblakih, pade na tla v obliki dežja ali snega. Nato pronica v zemeljske plasti in se nabira kot podzemna voda – podtalnica."
+  },
+  {
+    "question": "Na primeru razloži pojme: topilo, topljenec, raztopina.",
+    "answer": "Topilo je snov, ki raztaplja (npr. voda). Topljenec je snov, ki se raztaplja (npr. sol ali sladkor). Raztopina je mešanica topila in topljenca."
+  },
+  {
+    "question": "Zakaj moramo s pitno vodo ravnati varčno in preudarno?",
+    "answer": "Ravnati moramo varčno, saj je količina pitne vode na Zemlji omejena."
+  },
+  {
+    "question": "Kaj ogroža kakovost pitne vode?",
+    "answer": "Ogrožajo jo neustrezno odlaganje odpadnih vod iz industrije in gospodinjstev, čezmerna raba gnojil in škropiv v kmetijstvu ter promet."
+  },
+  {
+    "question": "Kaj je podtalnica?",
+    "answer": "Podtalnica je glavni vir pitne vode, zato ne sme vsebovati škodljivih in strupenih snovi."
+  },
+  {
+    "question": "Kaj vpliva na nastanek tal?",
+    "answer": "Na nastanek tal vplivajo dejavniki okolja: oblikovanost površja, podnebje, količina padavin, temperatura, veter in živa bitja v tleh. Ti dejavniki povzročajo, da kamnina na površju razpada (preperjeva)."
+  },
+  {
+    "question": "Poimenuj tri vrste prsti.",
+    "answer": "Zgornjo plast tal imenujemo prst. Poznamo gozdno, glineno in peščeno prst."
+  },
+  {
+    "question": "Po čem se različne prsti ločijo med seboj?",
+    "answer": "Razlikujejo se po barvi, sestavi, zrnavosti, vlažnosti in prepustnosti za vodo."
+  },
+  {
+    "question": "Kako se imenuje proces razpadanja kamnin?",
+    "answer": "Preperjevanje."
+  },
+  {
+    "question": "Kakšna je vloga razkrojevalcev pri nastanku tal?",
+    "answer": "Razkrojevalci so organizmi, ki organske snovi (npr. odpadlo listje) spreminjajo v anorganske snovi."
+  },
+  {
+    "question": "Naštej nekaj razkrojevalcev.",
+    "answer": "Deževniki, hrošči, polži."
+  },
+  {
+    "question": "Zakaj voda hitreje pronica skozi tla z večjimi delci kot skozi tista z manjšimi delci?",
+    "answer": "Večji delci povečujejo zračnost tal, zato voda pronica hitreje. Tla z majhnimi delci so zbita, gosta in slabo zračna, zato voda skozi njih prehaja težje."
+  },
+  {
+    "question": "S čim vse človek onesnažuje tla?",
+    "answer": "Z neustreznim odlaganjem odpadkov in nevarnih snovi v naravo. Vzrok so lahko tudi poplave in druge naravne nesreče."
+  },
+  {
+    "question": "Kako lahko onesnaženje tal vpliva na onesnaženje vode?",
+    "answer": "Če so tla prepustna, dež spira umetna gnojila in druge strupe v podtalnico. Onesnažena podtalnica pa ni več primerna za pitje."
+  },
+  {
+    "question": "Kaj je zrak?",
+    "answer": "Zrak je zmes plinov."
+  },
+  {
+    "question": "Opiši sestavo zraka.",
+    "answer": "Zrak sestavlja največ dušika (78%), kisika (21%) ter 1% žlahtnih plinov in ogljikovega dioksida."
+  },
+  {
+    "question": "Poimenuj vsaj tri velike onesnaževalce zraka.",
+    "answer": "Avtomobili, industrija in živinoreja."
+  },
+  {
+    "question": "Naštej ukrepe za zmanjšanje onesnaževanja zraka.",
+    "answer": "Uporaba vozil na elektriko in ogrevanje (kurjava) na elektriko."
+  },
+  {
+    "question": "Kaj je to zelena tehnologija?",
+    "answer": "To je tehnologija, ki se ukvarja z razvojem novih goriv in čistil, ki ne onesnažujejo okolja."
+  },
+  {
+    "question": "Kaj je zračni tlak?",
+    "answer": "Zračni tlak je teža zraka, ki pritiska na Zemljo."
+  },
+  {
+    "question": "S katero napravo merimo zračni tlak?",
+    "answer": "Z barometrom."
+  },
+  {
+    "question": "Kje bo ob lepem vremenu zračni tlak najvišji – v Piranu, v Ljubljani ali na Triglavu?",
+    "answer": "Najvišji bo v Piranu (ob morju je tlak visok), na Triglavu pa je zračni tlak nižji."
+  },
+  {
+    "question": "Kaj je veter?",
+    "answer": "Veter je gibanje zraka."
+  },
+  {
+    "question": "Kaj povzroča veter?",
+    "answer": "Povzročajo ga razlike v zračnem tlaku, ki so posledica neenakomernega segrevanja Zemlje."
+  },
+  {
+    "question": "Kaj lahko vetru določimo?",
+    "answer": "Vetru določimo hitrost in smer."
+  },
+  {
+    "question": "Kako se imenuje naprava, ki meri smer vetra?",
+    "answer": "Vetrokaz."
+  },
+  {
+    "question": "Kako se imenuje naprava, ki meri moč vetra?",
+    "answer": "Vetromer."
+  },
+  {
+    "question": "Kaj je vetrna vreča?",
+    "answer": "Je vreča, ki plapola v vetru. Močneje ko piha, bolj je napolnjena z zrakom. Kaže tudi smer vetra."
+  },
+  {
+    "question": "Kako ocenimo smer vetra?",
+    "answer": "Ocenimo jo po smeri, iz katere veter piha."
+  },
+  {
+    "question": "Kaj je Beaufortova lestvica?",
+    "answer": "To je lestvica za merjenje moči vetra. Ima stopnje od 0 do 12 (0 pomeni brezvetrje, 12 pa orkan)."
+  },
+  {
+    "question": "Kako je lahko veter človeku koristen?",
+    "answer": "Z vetrom jadrajo jadrnice, vetrnice proizvajajo električno energijo, veter pa tudi oprašuje nekatere rastline."
+  },
+  {
+    "question": "Posledica česa so letni časi?",
+    "answer": "Letni časi so posledica kroženja Zemlje okoli Sonca in nagnjenosti Zemljine osi."
+  },
+  {
+    "question": "Zakaj se sneg prej stali na prisojni strani hriba kot na osojni?",
+    "answer": "Na prisojni strani sončni žarki padajo strmo, na osojni pa bolj položno."
+  },
+  {
+    "question": "Kaj povzročajo velika sklenjena območja nizkega zračnega tlaka?",
+    "answer": "Povzročajo padavine in oblačnost."
+  },
+  {
+    "question": "Kako se imenujejo območja nizkega zračnega tlaka?",
+    "answer": "Cikloni."
+  },
+  {
+    "question": "Kaj napovedujejo velika sklenjena območja visokega zračnega tlaka? Kako se imenujejo?",
+    "answer": "Imenujejo se anticikloni in napovedujejo lepo, suho in sončno vreme."
+  },
+  {
+    "question": "Kaj so vremenski simboli? Kje jih najdemo?",
+    "answer": "Z vremenskimi simboli opisujemo vreme. Najdemo jih na televiziji, na spletu in v časopisih."
+  }
+]
