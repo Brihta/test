@@ -206,8 +206,8 @@ async function maybeShowCardImage(card) {
   const faceEl = document.getElementById('cardFront');
   if (!imgEl) return;
   
-  // Hide image if not in druzba or no image term exists
-  if (currentSubject !== 'druzba' || !card.image) {
+  // Hide image if not in naravoslovje or no image term exists
+  if (currentSubject !== 'naravoslovje' || !card.image) {
     imgEl.style.display = 'none';
     autoFitCardText(faceEl); // Make sure text fits without image
     return;
