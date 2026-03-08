@@ -376,15 +376,16 @@ const SoundFX = (() => {
   }
 
   function correct() {
-    // Soft, modern, quick ascending bubble/ding
-    playTone({ freq: 800, freqEnd: 1000, type: 'sine', dur: 0.1, vol: 0.3 });
-    setTimeout(() => playTone({ freq: 1200, freqEnd: 1600, type: 'sine', dur: 0.2, vol: 0.2 }), 80);
+    // Duolingo-style: bright cheerful three-note chime C5-E5-C6
+    playTone({ freq: 523, freqEnd: 523, type: 'sine', dur: 0.14, vol: 0.38 });
+    setTimeout(() => playTone({ freq: 659, freqEnd: 659, type: 'sine', dur: 0.22, vol: 0.32 }), 110);
+    setTimeout(() => playTone({ freq: 1047, freqEnd: 1047, type: 'sine', dur: 0.28, vol: 0.18 }), 220);
   }
 
   function wrong() {
-    // Low descending buzz: two-tone drop
-    playTone({ freq: 320, freqEnd: 180, type: 'sawtooth', dur: 0.18, vol: 0.22 });
-    setTimeout(() => playTone({ freq: 200, freqEnd: 140, type: 'square', dur: 0.22, vol: 0.15 }), 180);
+    // Duolingo-style: dull low bwonk - descending minor second
+    playTone({ freq: 380, freqEnd: 300, type: 'triangle', dur: 0.18, vol: 0.35 });
+    setTimeout(() => playTone({ freq: 280, freqEnd: 220, type: 'triangle', dur: 0.28, vol: 0.28 }), 150);
   }
 
   function rankUp() {
@@ -531,7 +532,8 @@ class QuizApp {
       <div class="quiz-progress-wrap">
         <div class="quiz-progress-fill" style="width:${((this.index+1)/this.cards.length*100)}%"></div>
       </div>
-      <div class="quiz-question-card">
+      <div class="quiz-question-card ${card.isSloToEng ? 'mode-question' : 'mode-answer'}">
+        <span class="card-mode-icon">${card.isSloToEng ? '🔍' : '💡'}</span>
         <div class="quiz-question-text">${escapeHtml(card.front)}</div>
       </div>
       ${mult > 1 ? `<div class="quiz-mult-notify">🔥 Množilnik <strong>×${mult}</strong> aktiven!</div>` : ''}
@@ -944,7 +946,8 @@ class TimedApp {
       </div>
 
       <!-- QUESTION -->
-      <div class="quiz-question-card">
+      <div class="quiz-question-card ${card.isSloToEng ? 'mode-question' : 'mode-answer'}">
+        <span class="card-mode-icon">${card.isSloToEng ? '🔍' : '💡'}</span>
         <div class="quiz-question-text">${escapeHtml(card.front)}</div>
       </div>
 

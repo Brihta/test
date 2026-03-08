@@ -595,6 +595,25 @@ html { height: 100%; }
   box-shadow: 0 10px 30px rgba(0,0,0,0.22);
   min-height: 105px; display: flex;
   align-items: center; justify-content: center;
+  position: relative;
+}
+/* Mode tints on quiz/timed question card */
+.quiz-question-card.mode-question {
+  background: linear-gradient(135deg, #fffde7, #fff9c4);
+  border-top: 6px solid #f9c000;
+}
+.quiz-question-card.mode-answer {
+  background: linear-gradient(135deg, #e3f2fd, #f0f8ff);
+  border-top: 6px solid #4facfe;
+}
+.quiz-question-card .card-mode-icon {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.3rem;
+  line-height: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
 }
 .quiz-question-text {
   font-size: 1.65rem; font-weight: 700;
