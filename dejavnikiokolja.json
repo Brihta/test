@@ -195,6 +195,137 @@
     "question": "Kaj so vremenski simboli? Kje jih najdemo?",
     "answer": "Z vremenskimi simboli opisujemo vreme. Najdemo jih na televiziji, na spletu in v časopisih.",
     "image": "weather symbols forecast map"
+  }
+]    "answer": "Deževniki, hrošči, polži.",
+    "image": "earthworm soil"
+  },
+  {
+    "question": "Zakaj voda hitreje pronica skozi tla z večjimi delci kot skozi tista z manjšimi delci?",
+    "answer": "Večji delci povečujejo zračnost tal, zato voda pronica hitreje. Tla z majhnimi delci so zbita, gosta in slabo zračna, zato voda skozi njih prehaja težje.",
+    "image": "soil permeability"
+  },
+  {
+    "question": "S čim vse človek onesnažuje tla?",
+    "answer": "Z neustreznim odlaganjem odpadkov in nevarnih snovi v naravo. Vzrok so lahko tudi poplave in druge naravne nesreče.",
+    "image": "soil pollution"
+  },
+  {
+    "question": "Kako lahko onesnaženje tal vpliva na onesnaženje vode?",
+    "answer": "Če so tla prepustna, dež spira umetna gnojila in druge strupe v podtalnico. Onesnažena podtalnica pa ni več primerna za pitje.",
+    "image": "fertilizer runoff groundwater"
+  },
+  {
+    "question": "Kaj je zrak?",
+    "answer": "Zrak je zmes plinov.",
+    "image": "atmosphere earth"
+  },
+  {
+    "question": "Opiši sestavo zraka.",
+    "answer": "Zrak sestavlja največ dušika (78%), kisika (21%) ter 1% žlahtnih plinov in ogljikovega dioksida.",
+    "image": "atmosphere composition diagram"
+  },
+  {
+    "question": "Poimenuj vsaj tri velike onesnaževalce zraka.",
+    "answer": "Avtomobili, industrija in živinoreja.",
+    "image": "air pollution factory"
+  },
+  {
+    "question": "Naštej ukrepe za zmanjšanje onesnaževanja zraka.",
+    "answer": "Uporaba vozil na elektriko in ogrevanje (kurjava) na elektriko.",
+    "image": "electric vehicle clean energy"
+  },
+  {
+    "question": "Kaj je to zelena tehnologija?",
+    "answer": "To je tehnologija, ki se ukvarja z razvojem novih goriv in čistil, ki ne onesnažujejo okolja.",
+    "image": "green technology solar wind"
+  },
+  {
+    "question": "Kaj je zračni tlak?",
+    "answer": "Zračni tlak je teža zraka, ki pritiska na Zemljo.",
+    "image": "atmospheric pressure"
+  },
+  {
+    "question": "S katero napravo merimo zračni tlak?",
+    "answer": "Z barometrom.",
+    "image": "barometer"
+  },
+  {
+    "question": "Kje bo ob lepem vremenu zračni tlak najvišji – v Piranu, v Ljubljani ali na Triglavu?",
+    "answer": "Najvišji bo v Piranu (ob morju je tlak visok), na Triglavu pa je zračni tlak nižji.",
+    "image": "Triglav mountain Slovenia"
+  },
+  {
+    "question": "Kaj je veter?",
+    "answer": "Veter je gibanje zraka.",
+    "image": "wind"
+  },
+  {
+    "question": "Kaj povzroča veter?",
+    "answer": "Povzročajo ga razlike v zračnem tlaku, ki so posledica neenakomernega segrevanja Zemlje.",
+    "image": "wind air pressure difference"
+  },
+  {
+    "question": "Kaj lahko vetru določimo?",
+    "answer": "Vetru določimo hitrost in smer."
+  },
+  {
+    "question": "Kako se imenuje naprava, ki meri smer vetra?",
+    "answer": "Vetrokaz.",
+    "image": "weather vane"
+  },
+  {
+    "question": "Kako se imenuje naprava, ki meri moč vetra?",
+    "answer": "Vetromer.",
+    "image": "anemometer"
+  },
+  {
+    "question": "Kaj je vetrna vreča?",
+    "answer": "Je vreča, ki plapola v vetru. Močneje ko piha, bolj je napolnjena z zrakom. Kaže tudi smer vetra.",
+    "image": "windsock airport"
+  },
+  {
+    "question": "Kako ocenimo smer vetra?",
+    "answer": "Ocenimo jo po smeri, iz katere veter piha."
+  },
+  {
+    "question": "Kaj je Beaufortova lestvica?",
+    "answer": "To je lestvica za merjenje moči vetra. Ima stopnje od 0 do 12 (0 pomeni brezvetrje, 12 pa orkan).",
+    "image": "Beaufort scale"
+  },
+  {
+    "question": "Kako je lahko veter človeku koristen?",
+    "answer": "Z vetrom jadrajo jadrnice, vetrnice proizvajajo električno energijo, veter pa tudi oprašuje nekatere rastline.",
+    "image": "wind turbine sailing"
+  },
+  {
+    "question": "Posledica česa so letni časi?",
+    "answer": "Letni časi so posledica kroženja Zemlje okoli Sonca in nagnjenosti Zemljine osi.",
+    "image": "Earth seasons orbit"
+  },
+  {
+    "question": "Zakaj se sneg prej stali na prisojni strani hriba kot na osojni?",
+    "answer": "Na prisojni strani sončni žarki padajo strmo, na osojni pa bolj položno.",
+    "image": "sunny slope shady slope snow"
+  },
+  {
+    "question": "Kaj povzročajo velika sklenjena območja nizkega zračnega tlaka?",
+    "answer": "Povzročajo padavine in oblačnost.",
+    "image": "low pressure weather system clouds"
+  },
+  {
+    "question": "Kako se imenujejo območja nizkega zračnega tlaka?",
+    "answer": "Cikloni.",
+    "image": "cyclone weather map"
+  },
+  {
+    "question": "Kaj napovedujejo velika sklenjena območja visokega zračnega tlaka? Kako se imenujejo?",
+    "answer": "Imenujejo se anticikloni in napovedujejo lepo, suho in sončno vreme.",
+    "image": "anticyclone high pressure sunny"
+  },
+  {
+    "question": "Kaj so vremenski simboli? Kje jih najdemo?",
+    "answer": "Z vremenskimi simboli opisujemo vreme. Najdemo jih na televiziji, na spletu in v časopisih.",
+    "image": "weather symbols forecast map"
   },
   {
     "question": "Zakaj voda hitreje pronica skozi tla z večjimi delci kot skozi tista z manjšimi delci?",
