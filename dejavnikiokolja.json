@@ -3,7 +3,7 @@
     "question": "Kakšne lastnosti ima voda in za kaj vse jo uporabljamo?",
     "answer": "Voda je tekočina brez vonja, barve in okusa. Potrebujemo jo vsi – rastline, živali, glive in ljudje. Vodo uporabljamo za kuhanje, umivanje in čiščenje.",
     "cloze_levels": {
-      "level_1": "V___ je t_______ b___ v____, b____ in o____. P__________ jo v__ – r_______, ž_____, g____ in l_____. V___ u__________ za k______, u_______ in č_______.",
+      "level_1": "Voda je t_______ brez v____, b____ in o____. P__________ jo vsi – r_______, ž_____, g____ in l_____. Vodo u__________ za k______, u_______ in č_______.",
       "level_2": "____ je ________ ____ _____, _____ in _____. ___________ jo vsi – ________, ______, _____ in ______. ____ ___________ za _______, ________ in ________."
     }
   },
@@ -11,15 +11,15 @@
     "question": "V kakšnem stanju je lahko voda?",
     "answer": "Lahko je v trdnem, tekočem ali plinastem stanju.",
     "cloze_levels": {
-      "level_1": "L____ je v t_____, t______ a__ p________ s_____.",
-      "level_2": "_____ je v ______, _______ ali _________ ______."
+      "level_1": "Lahko je v t_____, t______ ali p________ s_____.",
+      "level_2": "Lahko je v ______, _______ ali _________ ______."
     }
   },
   {
     "question": "Kdaj voda izpareva in kdaj izhlapeva? Navedi primere.",
     "answer": "Izpareva: Ko voda prehaja iz tekočine v paro pri temperaturi vrelišča (npr. voda v posodi ob vretju). Izhlapeva: Ko voda prehaja iz tekočine v paro, ne da bi dosegla vrelišče (npr. izhlapevanje vode iz morja ali luž).",
     "cloze_levels": {
-      "level_1": "I_______: Ko v___ p______ iz t_______ v p___ p__ t__________ v_______ (n__. v___ v p_____ ob v_____). I________: Ko v___ p______ iz t_______ v p___, ne da bi d______ v_______ (n__. i___________ v___ iz m____ a__ l__).",
+      "level_1": "I_______: Ko voda p______ iz t_______ v paro pri t__________ v_______ (npr. voda v p_____ ob v_____). I________: Ko voda p______ iz t_______ v paro, ne da bi d______ v_______ (npr. i___________ vode iz m____ ali luž).",
       "level_2": "________: Ko ____ _______ iz ________ v ____ pri ___________ ________ (npr. ____ v ______ ob ______). _________: Ko ____ _______ iz ________ v ____, ne da bi _______ ________ (npr. ____________ ____ iz _____ ali luž)."
     }
   },
@@ -27,15 +27,15 @@
     "question": "Kako voda kroži v naravi?",
     "answer": "Iz površinskih voda voda izhlapeva in se nabira v ozračju, kjer kondenzira. Voda, ki se zbere v oblakih, pade na tla v obliki dežja ali snega. Nato pronica v zemeljske plasti in se nabira kot podzemna voda – podtalnica.",
     "cloze_levels": {
-      "level_1": "Iz p__________ v___ v___ i________ in se n_____ v o______, k___ k_________. V___, ki se z____ v o______, p___ na t__ v o_____ d____ a__ s____. N___ p______ v z________ p_____ in se n_____ k__ p_______ v___ – p_________.",
-      "level_2": "Iz ___________ ____ ____ _________ in se ______ v _______, ____ __________. ____, ki se _____ v _______, ____ na tla v ______ _____ ali _____. ____ _______ v _________ ______ in se ______ kot ________ ____ – __________."
+      "level_1": "Iz p__________ voda voda i________ in se n_____ v o______, kjer k_________. Voda, ki se z____ v o______, pade na tla v o_____ d____ ali s____. Nato p______ v z________ p_____ in se n_____ kot p_______ voda – p_________.",
+      "level_2": "Iz ___________ ____ ____ _________ in se ______ v _______, kjer __________. ____, ki se _____ v _______, pade na tla v ______ _____ ali _____. ____ _______ v _________ ______ in se ______ kot ________ ____ – __________."
     }
   },
   {
     "question": "Na primeru razloži pojme: topilo, topljenec, raztopina.",
     "answer": "Topilo je snov, ki raztaplja (npr. voda). Topljenec je snov, ki se raztaplja (npr. sol ali sladkor). Raztopina je mešanica topila in topljenca.",
     "cloze_levels": {
-      "level_1": "T_____ je s___, ki r________ (n__. v___). T________ je s___, ki se r________ (n__. s__ a__ s______). R________ je m_______ t_____ in t________.",
+      "level_1": "T_____ je snov, ki r________ (npr. voda). T________ je snov, ki se r________ (npr. sol ali s______). R________ je m_______ t_____ in t________.",
       "level_2": "______ je ____, ki _________ (npr. ____). _________ je ____, ki se _________ (npr. sol ali _______). _________ je ________ ______ in _________."
     }
   },
@@ -43,15 +43,15 @@
     "question": "Zakaj moramo s pitno vodo ravnati varčno in preudarno?",
     "answer": "Ravnati moramo varčno, saj je količina pitne vode na Zemlji omejena.",
     "cloze_levels": {
-      "level_1": "R______ m_____ v_____, s__ je k_______ p____ v___ na Z_____ o______.",
-      "level_2": "_______ ______ ______, saj je ________ _____ ____ na ______ _______."
+      "level_1": "R______ moramo v_____, saj je k_______ p____ vode na Z_____ o______.",
+      "level_2": "_______ moramo ______, saj je ________ _____ ____ na ______ _______."
     }
   },
   {
     "question": "Kaj ogroža kakovost pitne vode?",
     "answer": "Ogrožajo jo neustrezno odlaganje odpadnih vod iz industrije in gospodinjstev, čezmerna raba gnojil in škropiv v kmetijstvu ter promet.",
     "cloze_levels": {
-      "level_1": "O_______ jo n_________ o________ o_______ v__ iz i_________ in g____________, č_______ r___ g_____ in š______ v k_________ t__ p_____.",
+      "level_1": "O_______ jo n_________ o________ o_______ vod iz i_________ in g____________, č_______ raba g_____ in š______ v k_________ ter p_____.",
       "level_2": "________ jo __________ _________ ________ vod iz __________ in _____________, ________ ____ ______ in _______ v __________ ter ______."
     }
   },
@@ -59,15 +59,15 @@
     "question": "Kaj je podtalnica?",
     "answer": "Podtalnica je glavni vir pitne vode, zato ne sme vsebovati škodljivih in strupenih snovi.",
     "cloze_levels": {
-      "level_1": "P_________ je g_____ v__ p____ v___, z___ ne s__ v________ š_________ in s________ s____.",
-      "level_2": "__________ je ______ vir _____ ____, ____ ne sme _________ __________ in _________ _____."
+      "level_1": "P_________ je g_____ vir p____ vode, zato ne sme v________ š_________ in s________ s____.",
+      "level_2": "__________ je ______ vir _____ ____, zato ne sme _________ __________ in _________ _____."
     }
   },
   {
     "question": "Kaj vpliva na nastanek tal?",
     "answer": "Na nastanek tal vplivajo dejavniki okolja: oblikovanost površja, podnebje, količina padavin, temperatura, veter in živa bitja v tleh. Ti dejavniki povzročajo, da kamnina na površju razpada (preperjeva).",
     "cloze_levels": {
-      "level_1": "Na n_______ t__ v_______ d________ o_____: o___________ p______, p_______, k_______ p______, t__________, v____ in ž___ b____ v t___. Ti d________ p_________, da k______ na p______ r______ (p_________).",
+      "level_1": "Na n_______ tal v_______ d________ o_____: o___________ p______, p_______, k_______ p______, t__________, v____ in živa b____ v tleh. Ti d________ p_________, da k______ na p______ r______ (p_________).",
       "level_2": "Na ________ tal ________ _________ ______: ____________ _______, ________, ________ _______, ___________, _____ in ____ _____ v ____. Ti _________ __________, da _______ na _______ _______ (__________)."
     }
   },
@@ -75,7 +75,7 @@
     "question": "Poimenuj tri vrste prsti.",
     "answer": "Zgornjo plast tal imenujemo prst. Poznamo gozdno, glineno in peščeno prst.",
     "cloze_levels": {
-      "level_1": "Z______ p____ t__ i________ p___. P______ g_____, g______ in p______ p___.",
+      "level_1": "Z______ p____ tal i________ prst. P______ g_____, g______ in p______ prst.",
       "level_2": "_______ _____ tal _________ ____. _______ ______, _______ in _______ ____."
     }
   },
@@ -83,7 +83,7 @@
     "question": "Po čem se različne prsti ločijo med seboj?",
     "answer": "Razlikujejo se po barvi, sestavi, zrnatosti, vlažnosti in prepustnosti za vodo.",
     "cloze_levels": {
-      "level_1": "R__________ se po b____, s______, z________, v________ in p___________ za v___.",
+      "level_1": "R__________ se po b____, s______, z________, v________ in p___________ za vodo.",
       "level_2": "___________ se po _____, _______, _________, _________ in ____________ za ____."
     }
   },
@@ -99,7 +99,7 @@
     "question": "Kakšna je vloga razkrojevalcev pri nastanku tal?",
     "answer": "Razkrojevalci so organizmi, ki organske snovi (npr. odpadlo listje) spreminjajo v anorganske snovi.",
     "cloze_levels": {
-      "level_1": "R____________ so o________, ki o_______ s____ (n__. o______ l_____) s__________ v a_________ s____.",
+      "level_1": "R____________ so o________, ki o_______ s____ (npr. o______ l_____) s__________ v a_________ s____.",
       "level_2": "_____________ so _________, ki ________ _____ (npr. _______ ______) ___________ v __________ _____."
     }
   },
@@ -115,23 +115,23 @@
     "question": "Zakaj voda hitreje pronica skozi tla z večjimi delci kot skozi tista z manjšimi delci?",
     "answer": "Večji delci povečujejo zračnost tal, zato voda pronica hitreje. Tla z majhnimi delci so zbita, gosta in slabo zračna, zato voda skozi njih prehaja težje.",
     "cloze_levels": {
-      "level_1": "V____ d____ p_________ z_______ t__, z___ v___ p______ h______. T__ z m_______ d____ so z____, g____ in s____ z_____, z___ v___ s____ n___ p______ t____.",
-      "level_2": "_____ _____ __________ ________ tal, ____ ____ _______ _______. Tla z ________ _____ so _____, _____ in _____ ______, ____ ____ _____ ____ _______ _____."
+      "level_1": "V____ d____ p_________ z_______ tal, zato voda p______ h______. Tla z m_______ d____ so z____, g____ in s____ z_____, zato voda s____ njih p______ t____.",
+      "level_2": "_____ _____ __________ ________ tal, zato ____ _______ _______. Tla z ________ _____ so _____, _____ in _____ ______, zato ____ _____ ____ _______ _____."
     }
   },
   {
     "question": "S čim vse človek onesnažuje tla?",
     "answer": "Z neustreznim odlaganjem odpadkov in nevarnih snovi v naravo. Vzrok so lahko tudi poplave in druge naravne nesreče.",
     "cloze_levels": {
-      "level_1": "Z n__________ o_________ o_______ in n_______ s____ v n_____. V____ so l____ t___ p______ in d____ n______ n______.",
-      "level_2": "Z ___________ __________ ________ in ________ _____ v ______. _____ so _____ ____ _______ in _____ _______ _______."
+      "level_1": "Z n__________ o_________ o_______ in n_______ s____ v n_____. V____ so lahko tudi p______ in d____ n______ n______.",
+      "level_2": "Z ___________ __________ ________ in ________ _____ v ______. _____ so lahko tudi _______ in _____ _______ _______."
     }
   },
   {
     "question": "Kako lahko onesnaženje tal vpliva na onesnaženje vode?",
     "answer": "Če so tla prepustna, dež spira umetna gnojila in druge strupe v podtalnico. Onesnažena podtalnica pa ni več primerna za pitje.",
     "cloze_levels": {
-      "level_1": "Če so t__ p________, d__ s____ u_____ g______ in d____ s_____ v p_________. O_________ p_________ pa ni v__ p_______ za p____.",
+      "level_1": "Če so tla p________, dež s____ u_____ g______ in d____ s_____ v p_________. O_________ p_________ pa ni več p_______ za p____.",
       "level_2": "Če so tla _________, dež _____ ______ _______ in _____ ______ v __________. __________ __________ pa ni več ________ za _____."
     }
   },
@@ -139,7 +139,7 @@
     "question": "Kaj je zrak?",
     "answer": "Zrak je zmes plinov.",
     "cloze_levels": {
-      "level_1": "Z___ je z___ p_____.",
+      "level_1": "Zrak je zmes p_____.",
       "level_2": "____ je ____ ______."
     }
   },
@@ -147,7 +147,7 @@
     "question": "Opiši sestavo zraka.",
     "answer": "Zrak sestavlja največ dušika (78%), kisika (21%) ter 1% žlahtnih plinov in ogljikovega dioksida.",
     "cloze_levels": {
-      "level_1": "Z___ s________ n_____ d_____ (78%), k_____ (21%) t__ 1% ž_______ p_____ in o__________ d_______.",
+      "level_1": "Zrak s________ n_____ d_____ (78%), k_____ (21%) ter 1% ž_______ p_____ in o__________ d_______.",
       "level_2": "____ _________ ______ ______ (78%), ______ (21%) ter 1% ________ ______ in ___________ ________."
     }
   },
@@ -179,7 +179,7 @@
     "question": "Kaj je zračni tlak?",
     "answer": "Zračni tlak je teža zraka, ki pritiska na Zemljo.",
     "cloze_levels": {
-      "level_1": "Z_____ t___ je t___ z____, ki p_______ na Z_____.",
+      "level_1": "Z_____ tlak je teža z____, ki p_______ na Z_____.",
       "level_2": "______ ____ je ____ _____, ki ________ na ______."
     }
   },
@@ -195,7 +195,7 @@
     "question": "Kje bo ob lepem vremenu zračni tlak najvišji – v Piranu, v Ljubljani ali na Triglavu?",
     "answer": "Najvišji bo v Piranu (ob morju je tlak visok), na Triglavu pa je zračni tlak nižji.",
     "cloze_levels": {
-      "level_1": "N_______ bo v P_____ (ob m____ je t___ v____), na T_______ pa je z_____ t___ n____.",
+      "level_1": "N_______ bo v P_____ (ob m____ je tlak v____), na T_______ pa je z_____ tlak n____.",
       "level_2": "________ bo v ______ (ob _____ je ____ _____), na ________ pa je ______ ____ _____."
     }
   },
@@ -219,7 +219,7 @@
     "question": "Kaj lahko vetru določimo?",
     "answer": "Vetru določimo hitrost in smer.",
     "cloze_levels": {
-      "level_1": "V____ d_______ h______ in s___.",
+      "level_1": "V____ d_______ h______ in smer.",
       "level_2": "_____ ________ _______ in ____."
     }
   },
@@ -243,15 +243,15 @@
     "question": "Kaj je vetrna vreča?",
     "answer": "Je vreča, ki plapola v vetru. Močneje ko piha, bolj je napolnjena z zrakom. Kaže tudi smer vetra.",
     "cloze_levels": {
-      "level_1": "Je v____, ki p______ v v____. M______ ko p___, b___ je n_________ z z_____. K___ t___ s___ v____.",
-      "level_2": "Je _____, ki _______ v _____. _______ ko ____, ____ je __________ z ______. ____ ____ ____ _____."
+      "level_1": "Je v____, ki p______ v v____. M______ ko piha, bolj je n_________ z z_____. Kaže tudi smer v____.",
+      "level_2": "Je _____, ki _______ v _____. _______ ko ____, bolj je __________ z ______. ____ tudi ____ _____."
     }
   },
   {
     "question": "Kako ocenimo smer vetra?",
     "answer": "Ocenimo jo po smeri, iz katere veter piha.",
     "cloze_levels": {
-      "level_1": "O______ jo po s____, iz k_____ v____ p___.",
+      "level_1": "O______ jo po s____, iz k_____ v____ piha.",
       "level_2": "_______ jo po _____, iz ______ _____ ____."
     }
   },
@@ -259,7 +259,7 @@
     "question": "Kaj je Beaufortova lestvica?",
     "answer": "To je lestvica za merjenje moči vetra. Ima stopnje od 0 do 12 (0 pomeni brezvetrje, 12 pa orkan).",
     "cloze_levels": {
-      "level_1": "To je l_______ za m_______ m___ v____. I__ s______ od 0 do 12 (0 p_____ b_________, 12 pa o____).",
+      "level_1": "To je l_______ za m_______ moči v____. Ima s______ od 0 do 12 (0 p_____ b_________, 12 pa o____).",
       "level_2": "To je ________ za ________ ____ _____. Ima _______ od 0 do 12 (0 ______ __________, 12 pa _____)."
     }
   },
@@ -267,15 +267,15 @@
     "question": "Kako je lahko veter človeku koristen?",
     "answer": "Z vetrom jadrajo jadrnice, vetrnice proizvajajo električno energijo, veter pa tudi oprašuje nekatere rastline.",
     "cloze_levels": {
-      "level_1": "Z v_____ j______ j_______, v_______ p__________ e_________ e_______, v____ pa t___ o_______ n_______ r_______.",
-      "level_2": "Z ______ _______ ________, ________ ___________ __________ ________, _____ pa ____ ________ ________ ________."
+      "level_1": "Z v_____ j______ j_______, v_______ p__________ e_________ e_______, v____ pa tudi o_______ n_______ r_______.",
+      "level_2": "Z ______ _______ ________, ________ ___________ __________ ________, _____ pa tudi ________ ________ ________."
     }
   },
   {
     "question": "Posledica česa so letni časi?",
     "answer": "Letni časi so posledica kroženja Zemlje okoli Sonca in nagnjenosti Zemljine osi.",
     "cloze_levels": {
-      "level_1": "L____ č___ so p________ k_______ Z_____ o____ S____ in n__________ Z_______ o__.",
+      "level_1": "L____ časi so p________ k_______ Z_____ o____ S____ in n__________ Z_______ osi.",
       "level_2": "_____ ____ so _________ ________ ______ _____ _____ in ___________ ________ osi."
     }
   },
@@ -283,8 +283,8 @@
     "question": "Zakaj se sneg prej stali na prisojni strani hriba kot na osojni?",
     "answer": "Na prisojni strani sončni žarki padajo strmo, na osojni pa bolj položno.",
     "cloze_levels": {
-      "level_1": "Na p_______ s_____ s_____ ž____ p_____ s____, na o_____ pa b___ p______.",
-      "level_2": "Na ________ ______ ______ _____ ______ _____, na ______ pa ____ _______."
+      "level_1": "Na p_______ s_____ s_____ ž____ p_____ s____, na o_____ pa bolj p______.",
+      "level_2": "Na ________ ______ ______ _____ ______ _____, na ______ pa bolj _______."
     }
   },
   {
@@ -307,7 +307,7 @@
     "question": "Kaj napovedujejo velika sklenjena območja visokega zračnega tlaka? Kako se imenujejo?",
     "answer": "Imenujejo se anticikloni in napovedujejo lepo, suho in sončno vreme.",
     "cloze_levels": {
-      "level_1": "I________ se a__________ in n___________ l___, s___ in s_____ v____.",
+      "level_1": "I________ se a__________ in n___________ lepo, suho in s_____ v____.",
       "level_2": "_________ se ___________ in ____________ ____, ____ in ______ _____."
     }
   },
@@ -315,7 +315,7 @@
     "question": "Kaj so vremenski simboli? Kje jih najdemo?",
     "answer": "Z vremenskimi simboli opisujemo vreme. Najdemo jih na televiziji, na spletu in v časopisih.",
     "cloze_levels": {
-      "level_1": "Z v__________ s______ o________ v____. N______ j__ na t_________, na s_____ in v č________.",
+      "level_1": "Z v__________ s______ o________ v____. N______ jih na t_________, na s_____ in v č________.",
       "level_2": "Z ___________ _______ _________ _____. _______ jih na __________, na ______ in v _________."
     }
   }
