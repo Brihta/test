@@ -150,7 +150,7 @@
       e.stopPropagation();
       isCollapsed() ? expandToolbar() : collapseToolbar();
       // also close filter panel
-      document.getElementById('filterPanel').classList.remove('open');
+      const fp = document.getElementById('filterPanel'); if (fp) fp.classList.remove('open');
     });
 
     // Tap anywhere outside toolbar to collapse
