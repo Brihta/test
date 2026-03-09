@@ -1076,6 +1076,9 @@ html { height: 100%; }
   flex: 1; display: flex; align-items: center;
   justify-content: center; flex-wrap: wrap;
 }
+.cloze-word {
+  display: inline-block; white-space: nowrap;
+}
 .cloze-blank {
   display: inline-block;
   color: rgba(255,255,255,0.4);
