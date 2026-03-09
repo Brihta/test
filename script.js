@@ -1148,22 +1148,144 @@ class TimedApp {
 }
 
 
+
+// ── Cloze App ─────────────────────────────────────────────────────────────────
+class ClozeApp {
+  constructor(data) {
+    this.data    = data;   // raw MASTER_DATA items
+    this.index   = 0;
+    this.level   = null;   // null = front, 1 = vajenec, 2 = mojster
+    this.handleKey = this.handleKey.bind(this);
+    document.addEventListener('keydown', this.handleKey);
+    this.render();
+  }
+
+  destroy() {
+    document.removeEventListener('keydown', this.handleKey);
+  }
+
+  handleKey(e) {
+    if (e.code === 'ArrowRight' || e.code === 'Space') {
+      e.preventDefault();
+      if (this.level !== null) this.nextCard();
+    }
+    if (e.code === 'Digit1' || e.code === 'Numpad1') this.showLevel(1);
+    if (e.code === 'Digit2' || e.code === 'Numpad2') this.showLevel(2);
+  }
+
+  render() {
+    const area = document.getElementById('clozeArea');
+    if (!area) return;
+    if (!this.data || this.data.length === 0) {
+      area.innerHTML = `<div class="quiz-empty">Najprej naloži nabor kartic 👆</div>`;
+      return;
+    }
+
+    const item  = this.data[this.index % this.data.length];
+    const total = this.data.length;
+    const isBack = this.level !== null;
+
+    const clozeText = isBack
+      ? (this.level === 1
+          ? (item.cloze_levels?.level_1 || item.answer)
+          : (item.cloze_levels?.level_2 || item.answer))
+      : null;
+
+    area.innerHTML = `
+      <div class="cloze-counter">Kartica ${(this.index % total) + 1} od ${total}</div>
+      <div class="cloze-progress-wrap">
+        <div class="cloze-progress-fill" style="width:${(((this.index % total)+1)/total)*100}%"></div>
+      </div>
+
+      <div class="cloze-card-container">
+        <div class="cloze-card ${isBack ? 'cloze-flipped' : ''}" id="clozeCard">
+
+          <!-- FRONT: question -->
+          <div class="cloze-face cloze-front">
+            <div class="cloze-level-btns">
+              <button class="cloze-level-btn cloze-l1" id="clozeL1" title="Vajenec – prvi znaki vidni">
+                🔰 Vajenec
+              </button>
+              <button class="cloze-level-btn cloze-l2" id="clozeL2" title="Mojster – besede skrite">
+                ⚔️ Mojster
+              </button>
+            </div>
+            <div class="cloze-question-text">${escapeHtml(item.question)}</div>
+            <div class="cloze-hint">Izberi stopnjo ↑</div>
+          </div>
+
+          <!-- BACK: cloze text -->
+          <div class="cloze-face cloze-back">
+            <div class="cloze-level-label">${this.level === 1 ? '🔰 Vajenec' : '⚔️ Mojster'}</div>
+            <div class="cloze-answer-text">${this.renderCloze(clozeText || '')}</div>
+            <button class="cloze-next-btn" id="clozeNextBtn">
+              ${(this.index % total) + 1 < total ? 'Naslednja kartica ➡️' : '🔄 Začni znova'}
+            </button>
+          </div>
+
+        </div>
+      </div>
+      <div class="keyboard-hint">💡 1/2 za stopnjo · Puščica desno za naslednjo</div>
+    `;
+
+    document.getElementById('clozeL1')?.addEventListener('click', () => this.showLevel(1));
+    document.getElementById('clozeL2')?.addEventListener('click', () => this.showLevel(2));
+    document.getElementById('clozeNextBtn')?.addEventListener('click', () => this.nextCard());
+  }
+
+  renderCloze(text) {
+    // Style blanks (underscores) with a special span for visual presentation
+    return escapeHtml(text).replace(/_{2,}/g, match =>
+      `<span class="cloze-blank">${match}</span>`
+    );
+  }
+
+  showLevel(n) {
+    this.level = n;
+    this.render();
+    // Trigger flip animation after render
+    requestAnimationFrame(() => {
+      const card = document.getElementById('clozeCard');
+      if (card) card.classList.add('cloze-flipped');
+    });
+  }
+
+  nextCard() {
+    this.index++;
+    this.level = null;
+    this.render();
+  }
+}
+
+function reinitClozeApp() {
+  if (window.clozeApp) { window.clozeApp.destroy(); window.clozeApp = null; }
+  if (MASTER_DATA.length === 0) {
+    const area = document.getElementById('clozeArea');
+    if (area) area.innerHTML = `<div class="quiz-empty">Najprej naloži nabor kartic 👆</div>`;
+    return;
+  }
+  window.clozeApp = new ClozeApp(MASTER_DATA);
+}
+
 function switchMode(mode) {
   currentMode = mode;
   const fcPanel  = document.getElementById('flashcardPanel');
   const qzPanel  = document.getElementById('quizPanel');
   const tmPanel  = document.getElementById('timedPanel');
+  const czPanel  = document.getElementById('clozePanel');
   const scoreHUD = document.getElementById('scoreHUD');
   const sel      = document.getElementById('modeSelect');
   if (sel && sel.value !== mode) sel.value = mode;
 
-  if (window.app)      { window.app.destroy();      window.app      = null; }
-  if (window.quizApp)  { window.quizApp.destroy();   window.quizApp  = null; }
-  if (window.timedApp) { window.timedApp.destroy();  window.timedApp = null; }
+  if (window.app)       { window.app.destroy();       window.app       = null; }
+  if (window.quizApp)   { window.quizApp.destroy();    window.quizApp   = null; }
+  if (window.timedApp)  { window.timedApp.destroy();   window.timedApp  = null; }
+  if (window.clozeApp)  { window.clozeApp.destroy();   window.clozeApp  = null; }
 
   fcPanel.style.display  = 'none';
   qzPanel.style.display  = 'none';
   if (tmPanel) tmPanel.style.display = 'none';
+  if (czPanel) czPanel.style.display = 'none';
   scoreHUD.style.display = 'none';
 
   if (mode === 'flashcard') {
@@ -1178,6 +1300,9 @@ function switchMode(mode) {
   } else if (mode === 'timed') {
     if (tmPanel) tmPanel.style.display = 'flex';
     reinitTimedApp();
+  } else if (mode === 'cloze') {
+    if (czPanel) czPanel.style.display = 'flex';
+    reinitClozeApp();
   }
 }
 
@@ -1270,6 +1395,7 @@ function reinitApp() {
   if (currentMode === 'flashcard') reinitFlashcardApp();
   else if (currentMode === 'quiz') reinitQuizApp();
   else if (currentMode === 'timed') reinitTimedApp();
+  else if (currentMode === 'cloze') reinitClozeApp();
 }
 
 
@@ -1278,9 +1404,10 @@ reloadBtn.addEventListener("click", async () => {
   const ds = currentDataset();
   if (!ds) return;
   localStorage.setItem(SELECT_KEY, ds.id);
-  if (window.app)      { window.app.destroy();      window.app      = null; }
-  if (window.quizApp)  { window.quizApp.destroy();   window.quizApp  = null; }
-  if (window.timedApp) { window.timedApp.destroy();  window.timedApp = null; }
+  if (window.app)       { window.app.destroy();       window.app       = null; }
+  if (window.quizApp)   { window.quizApp.destroy();    window.quizApp   = null; }
+  if (window.timedApp)  { window.timedApp.destroy();   window.timedApp  = null; }
+  if (window.clozeApp)  { window.clozeApp.destroy();   window.clozeApp  = null; }
   clearDomListeners();
   setLoadingUI(true);
   try {
@@ -1293,6 +1420,8 @@ reloadBtn.addEventListener("click", async () => {
       reinitQuizApp();
     } else if (currentMode === 'timed') {
       reinitTimedApp();
+    } else if (currentMode === 'cloze') {
+      reinitClozeApp();
     }
     // Collapse toolbar once the game is running
     if (typeof collapseToolbar === 'function') collapseToolbar();
