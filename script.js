@@ -1289,11 +1289,11 @@ class ClozeApp {
   }
 
   renderCloze(text) {
-    // Wrap [first-letter + underscores] together in a nowrap span
-    // so the hint letter never splits onto a different line from its blanks
-    return escapeHtml(text).replace(/([A-Za-zčšžČŠŽ])(_{2,})/g,
-      (_, letter, blanks) =>
-        `<span class="cloze-word">${letter}<span class="cloze-blank">${blanks}</span></span>`
+    // Wrap [first-letter + underscores + any trailing punctuation] in a nowrap span
+    // so nothing following a blank word can drift to the next line
+    return escapeHtml(text).replace(/([A-Za-zčšžČŠŽ])(_{2,})([.,;:!?]?)/g,
+      (_, letter, blanks, punct) =>
+        `<span class="cloze-word">${letter}<span class="cloze-blank">${blanks}</span>${punct}</span>`
     );
   }
 
