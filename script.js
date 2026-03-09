@@ -1152,9 +1152,12 @@ class TimedApp {
 // ── Cloze App ─────────────────────────────────────────────────────────────────
 class ClozeApp {
   constructor(data) {
-    this.data    = data;   // raw MASTER_DATA items
-    this.index   = 0;
-    this.level   = null;   // null = front, 1 = vajenec, 2 = mojster
+    this.data      = shuffle([...data]); // randomise on every new session
+    this.index     = 0;
+    this.level     = null;    // null=front, 1=vajenec, 2=mojster
+    this.revealed  = false;   // full answer shown?
+    this.results   = [];      // {question, answer, knew}
+    this.done      = false;
     this.handleKey = this.handleKey.bind(this);
     document.addEventListener('keydown', this.handleKey);
     this.render();
@@ -1165,12 +1168,16 @@ class ClozeApp {
   }
 
   handleKey(e) {
-    if (e.code === 'ArrowRight' || e.code === 'Space') {
-      e.preventDefault();
-      if (this.level !== null) this.nextCard();
+    if (this.done) return;
+    if (!this.level) {
+      if (e.code === 'Digit1' || e.code === 'Numpad1') this.showLevel(1);
+      if (e.code === 'Digit2' || e.code === 'Numpad2') this.showLevel(2);
+    } else if (!this.revealed) {
+      if (e.code === 'Space' || e.code === 'ArrowDown') { e.preventDefault(); this.revealAnswer(); }
+    } else {
+      if (e.code === 'ArrowRight' || e.code === 'KeyY') { e.preventDefault(); this.gradeCard(true); }
+      if (e.code === 'ArrowLeft'  || e.code === 'KeyN') { e.preventDefault(); this.gradeCard(false); }
     }
-    if (e.code === 'Digit1' || e.code === 'Numpad1') this.showLevel(1);
-    if (e.code === 'Digit2' || e.code === 'Numpad2') this.showLevel(2);
   }
 
   render() {
@@ -1180,9 +1187,10 @@ class ClozeApp {
       area.innerHTML = `<div class="quiz-empty">Najprej naloži nabor kartic 👆</div>`;
       return;
     }
+    if (this.done) { this.renderSummary(); return; }
 
-    const item  = this.data[this.index % this.data.length];
-    const total = this.data.length;
+    const item   = this.data[this.index];
+    const total  = this.data.length;
     const isBack = this.level !== null;
 
     const clozeText = isBack
@@ -1191,68 +1199,143 @@ class ClozeApp {
           : (item.cloze_levels?.level_2 || item.answer))
       : null;
 
-    area.innerHTML = `
-      <div class="cloze-counter">Kartica ${(this.index % total) + 1} od ${total}</div>
-      <div class="cloze-progress-wrap">
-        <div class="cloze-progress-fill" style="width:${(((this.index % total)+1)/total)*100}%"></div>
-      </div>
+    let backContent = '';
+    if (isBack) {
+      backContent = `
+        <div class="cloze-level-label">${this.level === 1 ? '🔰 Vajenec' : '⚔️ Mojster'}</div>
+        <div class="cloze-answer-text">${this.renderCloze(clozeText || '')}</div>
+        ${this.revealed ? `
+          <div class="cloze-reveal-box">
+            <div class="cloze-reveal-label">✅ Celoten odgovor:</div>
+            <div class="cloze-reveal-text">${escapeHtml(item.answer)}</div>
+          </div>
+          <div class="cloze-grade-btns">
+            <button class="cloze-grade-btn cloze-retry" id="clozeRetry">❌ Še vadim</button>
+            <button class="cloze-grade-btn cloze-knew" id="clozeKnew">✅ Znal/a sem</button>
+          </div>
+          <div class="cloze-grade-hint">← Še vadim &nbsp;·&nbsp; Znal/a sem →</div>
+        ` : `
+          <button class="cloze-reveal-btn" id="clozeRevealBtn">👁️ Pokaži rešitev</button>
+          <div class="cloze-grade-hint">Odgovori ustno, nato preveri</div>
+        `}
+      `;
+    }
 
+    area.innerHTML = `
+      <div class="cloze-counter">Kartica ${this.index + 1} od ${total}</div>
+      <div class="cloze-progress-wrap">
+        <div class="cloze-progress-fill" style="width:${((this.index + 1) / total) * 100}%"></div>
+      </div>
       <div class="cloze-card-container">
         <div class="cloze-card ${isBack ? 'cloze-flipped' : ''}" id="clozeCard">
-
-          <!-- FRONT: question -->
           <div class="cloze-face cloze-front">
             <div class="cloze-level-btns">
-              <button class="cloze-level-btn cloze-l1" id="clozeL1" title="Vajenec – prvi znaki vidni">
-                🔰 Vajenec
-              </button>
-              <button class="cloze-level-btn cloze-l2" id="clozeL2" title="Mojster – besede skrite">
-                ⚔️ Mojster
-              </button>
+              <button class="cloze-level-btn cloze-l1" id="clozeL1" title="Vajenec – prvi znaki vidni">🔰 Vajenec</button>
+              <button class="cloze-level-btn cloze-l2" id="clozeL2" title="Mojster – besede skrite">⚔️ Mojster</button>
             </div>
             <div class="cloze-question-text">${escapeHtml(item.question)}</div>
             <div class="cloze-hint">Izberi stopnjo ↑</div>
           </div>
-
-          <!-- BACK: cloze text -->
-          <div class="cloze-face cloze-back">
-            <div class="cloze-level-label">${this.level === 1 ? '🔰 Vajenec' : '⚔️ Mojster'}</div>
-            <div class="cloze-answer-text">${this.renderCloze(clozeText || '')}</div>
-            <button class="cloze-next-btn" id="clozeNextBtn">
-              ${(this.index % total) + 1 < total ? 'Naslednja kartica ➡️' : '🔄 Začni znova'}
-            </button>
-          </div>
-
+          <div class="cloze-face cloze-back">${backContent}</div>
         </div>
       </div>
-      <div class="keyboard-hint">💡 1/2 za stopnjo · Puščica desno za naslednjo</div>
+      <div class="keyboard-hint">💡 1/2 za stopnjo · Presledek za rešitev · ←/→ za oceno</div>
     `;
 
     document.getElementById('clozeL1')?.addEventListener('click', () => this.showLevel(1));
     document.getElementById('clozeL2')?.addEventListener('click', () => this.showLevel(2));
-    document.getElementById('clozeNextBtn')?.addEventListener('click', () => this.nextCard());
+    document.getElementById('clozeRevealBtn')?.addEventListener('click', () => this.revealAnswer());
+    document.getElementById('clozeKnew')?.addEventListener('click', () => this.gradeCard(true));
+    document.getElementById('clozeRetry')?.addEventListener('click', () => this.gradeCard(false));
+  }
+
+  renderSummary() {
+    const area  = document.getElementById('clozeArea');
+    const knew  = this.results.filter(r => r.knew);
+    const retry = this.results.filter(r => !r.knew);
+    const pct   = Math.round((knew.length / this.results.length) * 100);
+    const medal = pct === 100 ? '🏆' : pct >= 70 ? '⭐' : pct >= 40 ? '📚' : '💪';
+
+    const listHtml = (items, cls) => items.length === 0
+      ? `<div class="cloze-sum-empty">—</div>`
+      : items.map(r => `
+          <div class="cloze-sum-item ${cls}">
+            <span class="cloze-sum-q">${escapeHtml(r.question)}</span>
+            <span class="cloze-sum-a">${escapeHtml(r.answer)}</span>
+          </div>`).join('');
+
+    area.innerHTML = `
+      <div class="cloze-summary">
+        <div class="cloze-sum-medal">${medal}</div>
+        <div class="cloze-sum-score">${knew.length} / ${this.results.length} <span>(${pct}%)</span></div>
+        <div class="cloze-sum-subtitle">pravilnih odgovorov</div>
+        <div class="cloze-sum-sections">
+          <div class="cloze-sum-section">
+            <div class="cloze-sum-heading cloze-sum-knew-head">✅ Znal/a sem (${knew.length})</div>
+            <div class="cloze-sum-list">${listHtml(knew, 'knew')}</div>
+          </div>
+          <div class="cloze-sum-section">
+            <div class="cloze-sum-heading cloze-sum-retry-head">❌ Še vadim (${retry.length})</div>
+            <div class="cloze-sum-list">${listHtml(retry, 'retry')}</div>
+          </div>
+        </div>
+        <button class="cloze-restart-btn" id="clozeRestartBtn">🔄 Ponovi vse kartice</button>
+        ${retry.length > 0 ? `<button class="cloze-restart-btn cloze-retry-only-btn" id="clozeRetryOnlyBtn">❌ Ponovi samo neznane (${retry.length})</button>` : ''}
+      </div>
+    `;
+
+    document.getElementById('clozeRestartBtn')?.addEventListener('click', () => this.restart(false));
+    document.getElementById('clozeRetryOnlyBtn')?.addEventListener('click', () => this.restart(true));
   }
 
   renderCloze(text) {
-    // Style blanks (underscores) with a special span for visual presentation
     return escapeHtml(text).replace(/_{2,}/g, match =>
       `<span class="cloze-blank">${match}</span>`
     );
   }
 
   showLevel(n) {
-    this.level = n;
+    this.level    = n;
+    this.revealed = false;
     this.render();
-    // Trigger flip animation after render
     requestAnimationFrame(() => {
       const card = document.getElementById('clozeCard');
       if (card) card.classList.add('cloze-flipped');
     });
   }
 
-  nextCard() {
+  revealAnswer() {
+    this.revealed = true;
+    this.render();
+    requestAnimationFrame(() => {
+      const card = document.getElementById('clozeCard');
+      if (card) card.classList.add('cloze-flipped');
+    });
+  }
+
+  gradeCard(knew) {
+    const item = this.data[this.index];
+    this.results.push({ question: item.question, answer: item.answer, knew });
+    SoundFX[knew ? 'correct' : 'wrong']();
     this.index++;
-    this.level = null;
+    this.level    = null;
+    this.revealed = false;
+    if (this.index >= this.data.length) this.done = true;
+    this.render();
+  }
+
+  restart(retryOnly) {
+    if (retryOnly) {
+      const toRetry = this.results.filter(r => !r.knew).map(r => r.question);
+      this.data = shuffle(this.data.filter(item => toRetry.includes(item.question)));
+    } else {
+      this.data = shuffle([...this.data]);
+    }
+    this.index    = 0;
+    this.level    = null;
+    this.revealed = false;
+    this.results  = [];
+    this.done     = false;
     this.render();
   }
 }

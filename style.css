@@ -1099,3 +1099,90 @@ html { height: 100%; }
   .cloze-question-text { font-size: 1.2rem; }
   .cloze-answer-text { font-size: 1.1rem; }
 }
+
+/* ── Cloze: reveal & grading ─────────────────────────────────────── */
+.cloze-reveal-btn {
+  padding: 10px 28px; border-radius: 14px; border: none;
+  background: rgba(255,255,255,0.18); color: #fff;
+  font-size: 0.95rem; font-weight: 700; cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+.cloze-reveal-btn:hover { background: rgba(255,255,255,0.32); transform: translateY(-2px); }
+
+.cloze-reveal-box {
+  background: rgba(255,255,255,0.15); border-radius: 12px;
+  padding: 10px 16px; width: 100%; text-align: center;
+  backdrop-filter: blur(4px);
+}
+.cloze-reveal-label {
+  font-size: 0.75rem; font-weight: 700; opacity: 0.8;
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px;
+}
+.cloze-reveal-text {
+  font-size: 1.1rem; font-weight: 600; line-height: 1.45; color: #fff;
+}
+.cloze-grade-btns {
+  display: flex; gap: 10px; width: 100%; justify-content: center;
+}
+.cloze-grade-btn {
+  flex: 1; max-width: 170px; padding: 11px 10px;
+  border-radius: 14px; border: none; cursor: pointer;
+  font-size: 0.92rem; font-weight: 800;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.cloze-grade-btn:hover  { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.2); }
+.cloze-grade-btn:active { transform: translateY(0); }
+.cloze-knew  { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #0a4a2a; }
+.cloze-retry { background: linear-gradient(135deg, #f5576c, #f093fb); color: #fff; }
+.cloze-grade-hint {
+  font-size: 0.72rem; opacity: 0.6; text-align: center; letter-spacing: 0.03em;
+}
+
+/* ── Cloze: summary screen ───────────────────────────────────────── */
+.cloze-summary {
+  width: 100%; display: flex; flex-direction: column;
+  align-items: center; gap: 10px; padding-bottom: 16px;
+}
+.cloze-sum-medal  { font-size: 3rem; line-height: 1; }
+.cloze-sum-score  {
+  font-size: 2.2rem; font-weight: 900; color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.cloze-sum-score span { font-size: 1.2rem; font-weight: 600; opacity: 0.75; }
+.cloze-sum-subtitle { font-size: 0.85rem; opacity: 0.65; color: #fff; margin-top: -6px; }
+.cloze-sum-sections {
+  display: flex; gap: 12px; width: 100%; flex-wrap: wrap;
+}
+.cloze-sum-section {
+  flex: 1; min-width: 220px;
+  background: rgba(255,255,255,0.10); border-radius: 14px;
+  padding: 12px; backdrop-filter: blur(6px);
+}
+.cloze-sum-heading {
+  font-size: 0.82rem; font-weight: 800; letter-spacing: 0.05em;
+  text-transform: uppercase; padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.15); margin-bottom: 8px;
+}
+.cloze-sum-knew-head  { color: #43e97b; }
+.cloze-sum-retry-head { color: #f5576c; }
+.cloze-sum-item {
+  padding: 7px 8px; border-radius: 8px; margin-bottom: 5px;
+  background: rgba(255,255,255,0.07);
+}
+.cloze-sum-item.knew  { border-left: 3px solid #43e97b; }
+.cloze-sum-item.retry { border-left: 3px solid #f5576c; }
+.cloze-sum-q { display: block; font-size: 0.8rem; opacity: 0.7; margin-bottom: 2px; }
+.cloze-sum-a { display: block; font-size: 0.88rem; font-weight: 600; color: #fff; line-height: 1.3; }
+.cloze-sum-empty { font-size: 0.85rem; opacity: 0.5; text-align: center; padding: 8px; }
+.cloze-restart-btn {
+  padding: 12px 28px; border-radius: 14px; border: none;
+  background: rgba(255,255,255,0.20); color: #fff;
+  font-size: 0.95rem; font-weight: 700; cursor: pointer;
+  transition: background 0.2s, transform 0.15s; width: 100%;
+}
+.cloze-restart-btn:hover { background: rgba(255,255,255,0.32); transform: translateY(-2px); }
+.cloze-retry-only-btn {
+  background: linear-gradient(135deg, rgba(245,87,108,0.4), rgba(240,147,251,0.4));
+}
