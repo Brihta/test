@@ -1247,6 +1247,22 @@ class ClozeApp {
     document.getElementById('clozeRevealBtn')?.addEventListener('click', () => this.revealAnswer());
     document.getElementById('clozeKnew')?.addEventListener('click', () => this.gradeCard(true));
     document.getElementById('clozeRetry')?.addEventListener('click', () => this.gradeCard(false));
+
+    // Auto-size card to tallest face so buttons are never hidden
+    requestAnimationFrame(() => {
+      const card  = document.getElementById('clozeCard');
+      const front = card?.querySelector('.cloze-front');
+      const back  = card?.querySelector('.cloze-back');
+      if (!card || !front || !back) return;
+      // Temporarily flatten back face (rotateY 180°) to measure its true height
+      back.style.transform   = 'rotateY(0deg)';
+      back.style.visibility  = 'hidden';
+      const backH  = back.scrollHeight;
+      back.style.transform   = '';
+      back.style.visibility  = '';
+      const frontH = front.scrollHeight;
+      card.style.height = Math.max(frontH, backH, 200) + 4 + 'px';
+    });
   }
 
   renderSummary() {
