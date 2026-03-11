@@ -470,7 +470,7 @@ function updateScoreHUD(score, streak) {
 // ── Quiz App ──────────────────────────────────────────────────────────────────
 class QuizApp {
   constructor(cards) {
-    this.cards    = cards;
+    this.cards    = shuffle([...cards]);
     this.index    = 0;
     this.score    = parseInt(localStorage.getItem(SCORE_KEY) || '0');
     this.streak   = 0;
@@ -627,7 +627,13 @@ class QuizApp {
   nextQuestion() {
     if (this._autoTimer) clearTimeout(this._autoTimer);
     this.answered = false;
-    this.index = (this.index + 1) % this.cards.length;
+    const next = this.index + 1;
+    if (next >= this.cards.length) {
+      this.cards = shuffle([...this.cards]);
+      this.index = 0;
+    } else {
+      this.index = next;
+    }
     this.render();
   }
 }
