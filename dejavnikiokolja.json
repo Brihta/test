@@ -105,10 +105,10 @@
   },
   {
     "question": "Naštej nekaj razkrojevalcev.",
-    "answer": "Deževniki.",
+    "answer": "Deževniki, hrošči, polži.",
     "cloze_levels": {
-      "level_1": "D________.",
-      "level_2": "D________."
+      "level_1": "D________, h_____, p____.",
+      "level_2": "D________, h_____, p____."
     }
   },
   {
